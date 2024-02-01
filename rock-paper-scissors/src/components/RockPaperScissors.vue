@@ -110,7 +110,9 @@ function surrender() {
           <h6 class="card-subtitle my-3 text-center text-danger fw-bold">
             *****GAME OVER!*****
           </h6>
-          <ul class="list-group list-group-flush mt-3">
+          <ul
+            class="list-group list-group-flush mt-3 w-50 container rounded-5 py-4"
+          >
             <li
               :class="winner === 'You won!' ? 'bg-success' : 'bg-danger'"
               class="list-group-item text-center text-white fw-bold fs-3"
@@ -119,7 +121,7 @@ function surrender() {
             </li>
           </ul>
 
-          <button @click="resetGame()" class="btn btn-secondary w-50 mt-3">
+          <button @click="resetGame()" class="btn btn-secondary w-30 mt-3">
             New Game
           </button>
         </section>
@@ -128,23 +130,32 @@ function surrender() {
           <h6 class="card-subtitle my-3 text-body-secondary text-center">
             Choose one:
           </h6>
-          <div class="d-flex justify-content-evenly">
-            <button @click="onclickRock()" class="btn btn-secondary w-30">
-              Rock
+          <div class="d-flex justify-content-evenly my-5">
+            <button
+              @click="onclickRock()"
+              class="btn btn-lg btn-light w-30 border-2 border-info"
+            >
+              Rock <i class="fa-regular fa-hand-back-fist"></i>
             </button>
-            <button @click="onclickPaper()" class="btn btn-secondary w-30">
-              Paper
+            <button
+              @click="onclickPaper()"
+              class="btn btn-lg btn-light w-30 border-2 border-warning"
+            >
+              Paper <i class="fa-regular fa-hand"></i>
             </button>
-            <button @click="onclickScissors()" class="btn btn-secondary w-30">
-              Scissors
+            <button
+              @click="onclickScissors()"
+              class="btn btn-lg btn-light w-30 border-2 border-success"
+            >
+              Scissors <i class="fa-regular fa-hand-scissors"></i>
             </button>
           </div>
 
           <hr class="opacity-25" />
-          <h6 class="card-subtitle my-3 text-center text-success">
+          <h6 class="card-subtitle my-4 text-center text-success">
             You picked: {{ playerChoice }}
           </h6>
-          <h6 class="card-subtitle my-3 text-center text-danger">
+          <h6 class="card-subtitle my-4 text-center text-danger">
             Computer picked: {{ computerChoice }}
           </h6>
         </section>
@@ -160,7 +171,10 @@ function surrender() {
           Rounds left: {{ 5 - currentRound }}
         </h6>
         <ul class="list-group list-group-flush">
-          <li v-if="!winner" class="list-group-item text-center bg-warning">
+          <li
+            v-if="!winner"
+            class="list-group-item text-center bg-transparent fs-1"
+          >
             {{ roundWinner }}
           </li>
         </ul>

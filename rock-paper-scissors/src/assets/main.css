@@ -33,8 +33,12 @@ html {
 }
 
 header h1 {
-  color: #2b7660;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 600;
-  text-shadow: #323232da;
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 5rem);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #fff;
+  -webkit-text-stroke: 0.01em #279dfe;
+  filter: drop-shadow(0.05em 0.05em 0 #279dfe);
+  font-family: "Fugaz One", sans-serif;
 }
