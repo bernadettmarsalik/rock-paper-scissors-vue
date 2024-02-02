@@ -130,22 +130,24 @@ function surrender() {
           <h6 class="card-subtitle my-3 text-body-secondary text-center">
             Choose one:
           </h6>
-          <div class="d-flex justify-content-evenly my-5">
+          <div
+            class="d-flex flex-md-row flex-sm-column justify-content-evenly my-5"
+          >
             <button
               @click="onclickRock()"
-              class="btn btn-lg btn-light w-30 border-2 border-info"
+              class="btn btn-lg btn-light w-30 border-2 border-info m-2"
             >
               Rock <i class="fa-regular fa-hand-back-fist"></i>
             </button>
             <button
               @click="onclickPaper()"
-              class="btn btn-lg btn-light w-30 border-2 border-warning"
+              class="btn btn-lg btn-light w-30 border-2 border-warning m-2"
             >
               Paper <i class="fa-regular fa-hand"></i>
             </button>
             <button
               @click="onclickScissors()"
-              class="btn btn-lg btn-light w-30 border-2 border-success"
+              class="btn btn-lg btn-light w-30 border-2 border-success m-2"
             >
               Scissors <i class="fa-regular fa-hand-scissors"></i>
             </button>
